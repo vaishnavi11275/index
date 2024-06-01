@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Flex Printing Shop</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f7;
+            color: #333;
+        }
+
+        /* Navigation Links */
+        .nav {
+            background-color: MediumSeaGreen;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .nav a {
+            padding: 10px;
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 18px;
+            display: inline-block;
+        }
+
+        .nav a:first-child {
+            margin-left: 20px;
+        }
+
+        .nav a:hover {
+            background-color: DarkSeaGreen;
+        }
+
+        /* Logo */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 150px;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #008080;
+        }
+
+        /* Services Section */
+        .services {
+            margin-top: 30px;
+            text-align: left;
+            color: #555;
+        }
+
+        .services h2 {
+            color: #008080;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .services li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            font-size: 16px;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #008080;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            flex: 0 1 calc(50% - 10px);
+            box-sizing: border-box;
+        }
+
+        .services li:hover {
+            background-color: #ecf0f1;
+            transform: translateY(-3px);
+        }
+
+        /* Calculator */
+        .calculator {
+            margin-top: 30px;
+        }
+
+        .calculator input {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: calc(50% - 5px);
+        }
+
+        .calculator button {
+            padding: 10px 20px;
+            background-color: MediumSeaGreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .calculator button:hover {
+            background-color: DarkSeaGreen;
+        }
+
+        /* Receipt Section */
+        .receipt {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        /* UPI Payment Section */
+        .upi-payment {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .upi-payment button {
+            padding: 10px 20px;
+            background-color: MediumSeaGreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .upi-payment button:hover {
+            background-color: DarkSeaGreen;
+        }
+
+        /* Social Media Links */
+        .social-media {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .social-media a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #008080;
+        }
+
+        /* Address */
+        .address {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+    <!-- Include QRCode.js library -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <!-- Logo -->
+    <img class="logo" src="yd.logo.jpeg" alt="Flex Printing Shop Logo">
+
+    <!-- Navigation -->
+    <div class="nav">
+        <a href="index.html" class="tooltip">
+            <span class="tooltiptext"></span>
+            HOME
+        </a>
+        <a href="services.html" class="tooltip">
+            <span class="tooltiptext"></span>
+            SERVICES
+        </a>
+        <a href="about.html" class="tooltip">
+            <span class="tooltiptext"></span>
+            ABOUT
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Our Services</h1>
+
+        <!-- Services Section -->
+        <div class="services">
+            <h2>Services Offered:</h2>
+            <ul>
+                <li onclick="setPrice('Regular Paper Printing', 12)">Regular Paper Printing (Rs 12/sqft)</li>
+                <li onclick="setPrice('White Star Paper Printing', 25)">White Star Paper Printing (Rs 25/sqft)</li>
+                <li onclick="setPrice('Black Star Paper Printing', 35)">Black Star Paper Printing (Rs 35/sqft)</li>
+                <li onclick="setPrice('Backlit Paper Printing', 50)">Backlit Paper Printing (Rs 50/sqft)</li>
+                <li onclick="setPrice('One Way Vision Printing (Without Pasting)', 110)">One Way Vision Printing (Without Pasting) (Rs 110/sqft)</li>
+                <li onclick="setPrice('Vinyl Printing (With Pasting)', 60)">Vinyl Printing (With Pasting) (Rs 60/sqft)</li>
+            </ul>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="calculator">
+            <input type="text" id="service" placeholder="Select Service" readonly>
+            <input type="number" id="sqft" placeholder="Enter Sqft">
+            <button onclick="calculateTotal()">Calculate Total</button>
+        </div>
+
+        <!-- Receipt Section -->
+        <div class="receipt" id="receipt"></div>
+
+        <!-- UPI Payment Section -->
+        <div class="upi-payment" id="upi-payment" style="display: none;">
+            <h2>UPI Payment Information</h2>
+            <p>To proceed with payment, please open your UPI app and enter the following details:</p>
+            <p><strong>UPI ID:</strong> 9850757111@ybl</p>
+            <p><strong>Amount:</strong> <span id="payment-amount"></span></p>
+            <p><button onclick="proceedToUPI()">PAY</button></p>
+            <div id="qrcode"></div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="https://www.youtube.com/yedeshwaridigitalkallam3229">YouTube</a>
+            <a href="https://www.instagram.com/yd_graphics_111/?igsh=MXZqdnhzZHhsaG8xcQ%3D%3D">Instagram</a>
+            <a href="https://wa.me/7774080087">WhatsApp</a>
+        </div>
+
+        <!-- Address -->
+        <div class="address">
+            <p>Address: Savarkar chowk, Main road, Kalamb.413507</p>
+        </div>
+    </div>
+
+    <!-- Script for Calculator and UPI Payment -->
+    <script>
+        let pricePerSqft = 0;
+
+        function setPrice(service, price) {
+            document.getElementById('service').value = service;
+            pricePerSqft = price;
+        }
+
+        function calculateTotal() {
+            const service = document.getElementById('service').value;
+            const sqft = parseFloat(document.getElementById('sqft').value);
+            if (!service || isNaN(sqft) || sqft <= 0 || pricePerSqft === 0) {
+                alert('Please select a service and enter a valid square footage.');
+                return;
+            }
+            const designingCharge = 150;
+            const totalCost = sqft * pricePerSqft + designingCharge;
+
+            const receipt = `<h2>Receipt</h2>
+                             <div>Service: ${service}</div>
+                             <div>Price per sqft: Rs ${pricePerSqft}</div>
+                             <div>Sqft: ${sqft}</div>
+                             <div>Total Cost: Rs ${totalCost.toFixed(2)}</div>`;
+
+            document.getElementById('receipt').innerHTML = receipt;
+
+            document.getElementById('upi-payment').style.display = 'block';
+            document.getElementById('payment-amount').textContent = totalCost.toFixed(2);
+
+            // Generate UPI QR code
+            const upiId = "9850757111@ybl";
+            const upiUrl = `upi://pay?pa=${upiId}&pn=Yedeshwari%20Digital&am=${totalCost.toFixed(2)}&cu=INR`;
+
+            document.getElementById('qrcode').innerHTML = "";
+            new QRCode(document.getElementById('qrcode'), upiUrl);
+        }
+
+        function proceedToUPI() {
+            const totalCost = document.getElementById('payment-amount').textContent;
+            const upiId = "9850757111@ybl";
+            const upiUrl = `upi://pay?pa=${upiId}&pn=Yedeshwari%20Digital&am=${totalCost}&cu=INR`;
+
+            window.location.href = upiUrl;
+        }
+    </script>
+</body>
+</html>

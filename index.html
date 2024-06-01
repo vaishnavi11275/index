@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEDESHWARI DIGITAL</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #f0f8f7; /* Light mint green */
+            font-family: 'Roboto', sans-serif; /* Updated font family */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Navigation Styles */
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .nav-link {
+            padding: 20px 30px;
+            margin-right: 10px;
+            background-color: MediumSeaGreen;
+            font-size: 28px;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: DarkSeaGreen;
+        }
+
+        /* Shop Name and Description Styles */
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            color: #008080;
+            margin-top: 40px;
+            margin-bottom: 0;
+        }
+
+        .shop-description {
+            font-size: 20px;
+            text-align: center;
+            line-height: 32px;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        /* Services Section Styles */
+        .services {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .services h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #008080;
+            margin-bottom: 20px;
+        }
+
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .services li {
+            font-size: 20px;
+            margin: 10px;
+            padding: 15px 30px;
+            background-color: #e0f2f1; /* Light teal */
+            color: #333;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .services li:hover {
+            background-color: #b2dfdb; /* Darker teal on hover */
+            transform: translateY(-3px);
+        }
+
+        /* Service Images Styles */
+        .service-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allows wrapping if images overflow */
+            gap: 10px; /* Increased gap for better spacing */
+            margin: 20px auto;
+            max-width: 90%; /* Maximum width of the container */
+        }
+
+        .service-images img {
+            width: 20%; /* Reduced width for better fit */
+            height: auto;
+            margin: 10px; /* Consistent space between images */
+        }
+
+        /* Social Media Styles */
+        .social-media-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-media-link {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 18px;
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .social-media-icon {
+            width: 30px;
+            vertical-align: middle;
+        }
+
+        .social-media-link:hover {
+            color: #008080;
+        }
+
+        .tooltip {
+            position: absolute;
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .social-media-link:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Address Styles */
+        .address {
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f0f8f7; /* Light teal */
+            border-radius: 10px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="text-align:center; margin-top: 35px;">
+            <img style="width:15%;" src="yd.logo.jpeg" alt="Logo">
+        </div>
+        <nav>
+            <a class="nav-link" href="index.html">HOME</a>
+            <a class="nav-link" href="services.html">SERVICES</a>
+            <a class="nav-link" href="about.html">ABOUT</a>
+        </nav>
+    </header>
+
+    <h1>YEDESHWARI DIGITAL</h1>
+
+    <p class="shop-description">Ek Call Problem Solve!!!</p>
+
+    <hr/>
+
+    <div class="services">
+        <h2>OUR MAIN SERVICES</h2>
+        <ul>
+            <li>Shop Board Printing</li>
+            <li>Election Banner Printing</li>
+            <li>Backlight Board Printing</li>
+            <li>Vinyl Printing</li>
+            <li>One Way Vision Printing</li>
+            <li>Hoardings</li>
+            <li>Advertising</li>
+        </ul>
+    </div>
+
+    <div class="service-images">
+        <img src="yd1.jpg" alt="Service 1">
+        <img src="yd2.jpg" alt="Service 2">
+        <img src="yd3.jpg" alt="Service 3">
+        <img src="yd4.jpg" alt="Service 4">
+    </div>
+
+    <hr/>
+
+    <h2 style="text-align:center;">Follow us on:</h2>
+
+    <div class="social-media-container">
+        <div class="social-media-link">
+            <img class="social-media-icon" src="youtube.png" alt="YouTube">
+            <a href="https://www.youtube.com/@yedeshwaridigitalkallam3229">Yedeshwari Digital</a>
+            <span class="tooltip">YouTube</span>
+        </div>
+        <div class="social-media-link">
+            <img class="social-media-icon" src="instagram.png" alt="Instagram">
+            <a href="https://www.instagram.com/yd_graphics_111?igsh=MXZqdnhzZHhsaG8xcQ==">yd_graphics_111</a>
+            <span class="tooltip">Instagram</span>
+        </div>
+        <div class="social-media-link">
+            <img class="social-media-icon" src="whatsapp.webp" alt="WhatsApp">
+            <a href="https://wa.me/7774080087">WhatsApp: 7774080087</a>
+            <span class="tooltip">WhatsApp</span>
+        </div>
+    </div>
+
+    <!-- Address Section -->
+    <div class="address">
+        <p><strong>Address:</strong> Savarkar chowk, Main road, Kalamb</p>
+    </div>
+</body>
+</html>
